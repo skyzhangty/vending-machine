@@ -1,0 +1,7 @@
+<div *ngIf="vendingMachine$ | async as vendingMachine">
+  <h4>Soda Count: {{vendingMachine.sodaCount}}</h4>
+  <h4>Vending Machine Status: {{vendingMachine.vendingMachineState}}</h4>
+  <button (click)="insertQuarter()" [disabled]="disableInsertQuarter(vendingMachine)">Insert a quarter</button>
+  <button (click)="removeQuarter()" [disabled]="disableRemoveQuarter(vendingMachine)">Remove a quarter</button>
+  <button (click)="pushForSoda()" [disabled]="disablePushForSoda(vendingMachine)">Push for soda</button>
+</div>

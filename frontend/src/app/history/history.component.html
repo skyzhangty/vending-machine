@@ -1,0 +1,5 @@
+<ul *ngIf="history$ | async as history">
+  <li *ngFor="let item of history">
+    {{item}}
+  </li>
+</ul>
